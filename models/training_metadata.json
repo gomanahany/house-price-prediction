@@ -1,0 +1,52 @@
+{
+  "dataset_shape": [
+    187531,
+    21
+  ],
+  "cleaned_rows": 176293,
+  "features": [
+    "carpet_area_sqft",
+    "floor_num",
+    "bathroom",
+    "balcony",
+    "car_parking",
+    "location_grouped",
+    "Furnishing",
+    "Transaction",
+    "Ownership",
+    "facing"
+  ],
+  "best_model": "RandomForestRegressor",
+  "metrics": [
+    {
+      "model": "RandomForestRegressor",
+      "MAE": 1373404.421302213,
+      "RMSE": 5530531.345771205,
+      "R2": 0.8365445237277865
+    },
+    {
+      "model": "LinearRegression",
+      "MAE": 4713675.070469053,
+      "RMSE": 8788458.288289333,
+      "R2": 0.5872461330241232
+    }
+  ],
+  "dropped_columns": [
+    "Index",
+    "Title",
+    "Description",
+    "Amount(in rupees)",
+    "Price (in rupees)",
+    "Carpet Area",
+    "Floor",
+    "Bathroom",
+    "Balcony",
+    "Car Parking",
+    "Society",
+    "Super Area",
+    "Dimensions",
+    "Plot Area",
+    "overlooking"
+  ],
+  "dropped_columns_reason": "Index is an identifier; Title and Description are free-text fields; Amount(in rupees) is the raw target text field replaced by price_clean; Price (in rupees) is a redundant price-per-square-foot field; raw Carpet Area, Floor, Bathroom, Balcony, and Car Parking fields are replaced by engineered numeric features; Society is high-cardinality; Dimensions and Plot Area are entirely empty; overlooking is unused; and Super Area is 57.4% missing and overlaps with Carpet Area. Carpet Area is retained as the primary area feature because it is better defined and is also the area input used by the frontend."
+}

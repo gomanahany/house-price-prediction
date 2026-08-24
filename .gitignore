@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+node_modules/
+dist/
+.env
+*.log
+data/*.csv
+*.pkl
+.pytest_cache/
+.ipynb_checkpoints/
