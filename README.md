@@ -101,4 +101,4 @@ cd frontend; npm run build
 
 ## Screenshots
 
-Add screenshots of the completed form and prediction result here after starting both services locally.
+The application includes a React frontend for entering property details and displaying the predicted house price, with a FastAPI backend serving the machine-learning model.
